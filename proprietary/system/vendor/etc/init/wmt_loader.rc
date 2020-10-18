@@ -1,0 +1,5 @@
+service wmtLoader /vendor/bin/wmt_loader
+    user root
+    group root
+    class main
+    oneshot

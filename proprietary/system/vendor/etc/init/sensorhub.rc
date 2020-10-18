@@ -1,0 +1,46 @@
+on post-fs-data
+    chown system system /dev/iio:device0
+    chown system system /sys/bus/iio/devices/trigger0/name
+    chown system system /sys/bus/iio/devices/iio:device0/buffer
+    chown system system /sys/bus/iio/devices/iio:device0/buffer/length
+    chown system system /sys/bus/iio/devices/iio:device0/buffer/enable
+    chown system system /sys/bus/iio/devices/iio:device0/scan_elements/in_accel_x&y_en
+    chown system system /sys/bus/iio/devices/iio:device0/scan_elements/in_accel_x_en
+    chown system system /sys/bus/iio/devices/iio:device0/scan_elements/in_accel_y_en
+    chown system system /sys/bus/iio/devices/iio:device0/scan_elements/in_accel_z_en
+    chown system system /sys/bus/iio/devices/iio:device0/trigger/current_trigger
+    chown system system /sys/class/cywee_sensorhub/sensor_hub/iio/trigger/current_trigger
+    chown system system /sys/class/cywee_sensorhub/sensor_hub/batch
+    chown system system /sys/class/cywee_sensorhub/sensor_hub/calibrator_cmd
+    chown system system /sys/class/cywee_sensorhub/sensor_hub/calibrator_data
+    chown system system /sys/class/cywee_sensorhub/sensor_hub/raw_data0
+    chown system system /sys/class/cywee_sensorhub/sensor_hub/raw_data1
+    chown system system /sys/class/cywee_sensorhub/sensor_hub/raw_data2
+    chown system system /sys/class/cywee_sensorhub/sensor_hub/raw_data3
+    chown system system /sys/class/cywee_sensorhub/sensor_hub/raw_data4
+    chown system system /sys/class/cywee_sensorhub/sensor_hub/sys_cmd
+    chown system system /sys/class/cywee_sensorhub/sensor_hub/sys_msg
+    chown system system /sys/class/cywee_sensorhub/sensor_hub/enable
+    chown system system /sys/class/cywee_sensorhub/sensor_hub/firmware_update_cmd
+    chown system system /sys/class/cywee_sensorhub/sensor_hub/firmware_update_data
+    chown system system /sys/class/cywee_sensorhub/sensor_hub/firmware_update_i2c
+    chown system system /sys/class/cywee_sensorhub/sensor_hub/firmware_update_status
+    chown system system /sys/class/cywee_sensorhub/sensor_hub/flush
+    chown system system /sys/class/cywee_sensorhub/sensor_hub/iio
+    chown system system /sys/class/cywee_sensorhub/sensor_hub/mcu_mode
+    chown system system /sys/class/cywee_sensorhub/sensor_hub/timestamp
+    chown system system /sys/class/cywee_sensorhub/sensor_hub/version
+
+    chmod 660 /dev/iio:device0
+    chmod 660 /sys/bus/iio/devices/trigger0/name
+    chmod 660 /sys/bus/iio/devices/iio:device0/buffer/length
+    chmod 660 /sys/bus/iio/devices/iio:device0/buffer/enable
+    chmod 660 /sys/bus/iio/devices/iio:device0/trigger/current_trigger
+    chmod 660 /sys/class/cywee_sensorhub/sensor_hub/iio/trigger/current_trigger
+    chmod 660 /sys/bus/iio/devices/iio:device0/scan_elements/in_accel_x&y_en
+    chmod 660 /sys/bus/iio/devices/iio:device0/scan_elements/in_accel_x_en
+    chmod 660 /sys/bus/iio/devices/iio:device0/scan_elements/in_accel_y_en
+    chmod 660 /sys/bus/iio/devices/iio:device0/scan_elements/in_accel_z_en
+
+    mkdir /data/vendor 0771 root root
+    mkdir /data/vendor/sensorhub 0771 root root

@@ -1,0 +1,9 @@
+on property:service.wcn.coredump.mode=2
+    start stp_dump
+
+service stp_dump /vendor/bin/stp_dump3
+    user root
+    group root
+    class core
+    disabled
+    oneshot
